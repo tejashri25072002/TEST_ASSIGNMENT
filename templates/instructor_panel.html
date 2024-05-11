@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="static/style.css">
+<h1>Welcome Instructor!</h1>
+<h2>Your Assigned Lectures:</h2>
+<ul>
+    {% for lecture in lectures %}
+        <li>{{ lecture.date }} - {{ lecture.course.name }}</li>
+    {% endfor %}
+</ul>

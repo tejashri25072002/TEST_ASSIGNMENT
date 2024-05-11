@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="static/style.css">
+<h2>Assign Lecture:</h2>
+<form>
+    <label for="lectureDate">Lecture Date:</label>
+    <input type="date" id="lectureDate" name="lectureDate"><br><br>
+    <label for="instructor">Select Instructor:</label>
+    <select id="instructor" name="instructor">
+        {% for instructor in instructors %}
+            <option value="{{ instructor.id }}">{{ instructor.name }}</option>
+        {% endfor %}
+    </select><br><br>
+    <button type="submit">Assign Lecture</button>
+</form>
